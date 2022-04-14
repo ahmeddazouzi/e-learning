@@ -13,6 +13,10 @@ import { PathsComponent } from './paths/paths.component';
 import { CoursesComponent } from './courses/courses.component';
 import { EventsComponent } from './events/events.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { CoursesListComponent } from './adminComponents/courses-list/courses-list.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AdminCourseService } from './admin-course.service';
+//import { CouseslisttetstComponent } from './couseslisttetst/couseslisttetst.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +30,16 @@ import { AboutUsComponent } from './about-us/about-us.component';
     PathsComponent,
     CoursesComponent,
     EventsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CoursesListComponent,
+    //CouseslisttetstComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AdminCourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
