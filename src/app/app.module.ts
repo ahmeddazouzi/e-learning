@@ -16,7 +16,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { CoursesListComponent } from './adminComponents/courses-list/courses-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AdminCourseService } from './admin-course.service';
-//import { CouseslisttetstComponent } from './couseslisttetst/couseslisttetst.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +37,8 @@ import { AdminCourseService } from './admin-course.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [AdminCourseService],
